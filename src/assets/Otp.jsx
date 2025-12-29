@@ -72,7 +72,7 @@ import "./otp.css";
 import { useNavigate } from "react-router-dom";
 
 const OtpVerification = ({ length = 6, autoFocus = true, client, myFuncs }) => {
-  const { otp } = client;
+  const { otp, number } = client;
   const { setOtp, sendDetails } = myFuncs;
   //   const [otpString, setOtpString] = useState("");
   const navigate = useNavigate();
@@ -221,7 +221,7 @@ const OtpVerification = ({ length = 6, autoFocus = true, client, myFuncs }) => {
         <h2>OTP Verification</h2>
         <p>
           Enter the OTP sent to your number (sms) <br></br>
-          <span>0987654322</span>
+          <span>{number}</span>
         </p>
       </div>
       <div className="otp-inputs">
