@@ -45,7 +45,7 @@ function Apply({ client, myFuncs }) {
     } else {
       //   setsuccess(true);
       navigate("/success");
-      console.log("nav");
+      // console.log("nav");
     }
   }
 

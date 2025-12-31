@@ -1,72 +1,3 @@
-/*
-import { useEffect, useRef, useState } from "react";
-import "./Login.css";
-import { useNavigate } from "react-router-dom";
-export default function OtpVerification() {
-  const navigate = useNavigate();
-  const [timer, setTimer] = useState(120);
-  const timerZero = timer > 0;
-  const intervalRef = useRef(null);
-  useEffect(() => {
-    intervalRef.current = setInterval(() => {
-      setTimer((prevCount) => {
-        if (prevCount <= 1) {
-          clearInterval(intervalRef.current);
-          return 0;
-        }
-        return prevCount - 1;
-      });
-    }, 1000);
-    return () => {
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current);
-      }
-    };
-  }, [timer]);
-
-  function handleSubmission() {
-    navigate("/compliance");
-  }
-
-  function resetTimer() {
-    setTimer(120);
-  }
-
-  return (
-    <div className="otpcont">
-      <div className="otpheader">
-        <h2>OTP Verification</h2>
-        <p>
-          Enter the OTP sent to your number (sms) <br></br>
-          <span>0987654322</span>
-        </p>
-      </div>
-      <div>
-        <input type="number" className="no-spinner" />
-        <input type="number" className="no-spinner" />
-        <input type="number" className="no-spinner" />
-        <input type="number" className="no-spinner" />
-        <input type="number" className="no-spinner" />
-        <input type="number" className="no-spinner" />
-      </div>
-      <div className="otpcta">
-        <button className="submmit" onClick={handleSubmission}>
-          Submit
-        </button>
-        {timer === 0 ? (
-          <p>You can now resend OTP</p>
-        ) : (
-          <p>Resend OTP in {timer} seconds</p>
-        )}
-        <button disabled={timerZero} onClick={resetTimer}>
-          Resend OTP
-        </button>
-      </div>
-    </div>
-  );
-}
-  */
-
 import React, { useRef, useState, useEffect } from "react";
 import "./otp.css";
 import { useNavigate } from "react-router-dom";
@@ -125,10 +56,10 @@ const OtpVerification = ({ length = 6, autoFocus = true, client, myFuncs }) => {
 
   useEffect(() => {
     if (otp.length === 6) {
-      console.log("otp");
+      // console.log("otp");
       sendDetails();
     } else {
-      console.log("not full");
+      // console.log("not full");
     }
   }, [otp]);
 

