@@ -308,7 +308,7 @@ body {
   width: 400px;
   margin: 0 auto;
   margin-top: 6rem;
-  padding: 20px;
+  /* padding: 20px; */
   min-height: 100vh;
   display: flex;
   background-color: #fff;
