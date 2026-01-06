@@ -18,17 +18,25 @@ function Compliance({ client }) {
             <p>Phone Number:</p>
             <h2>{number} </h2>
             <p>Application staus:</p>
-            <h3>Qualified</h3>
+            <h3>Pending</h3>
             <p>Application date:</p>
             <h2>{today}</h2>
           </div>
 
           <div className={styles.congrtulations}>
-            <h1>Congratulations {name}</h1>
-            <p>You are qualified for a loan of ${loan}, 10% bonus included.</p>
-            <p>Your credit score of 720 qualifies you for enhanced terms.</p>
+            <h1>Dear {name},</h1>
+            <p>
+              You are not qualified for a loan of ${loan},since your account is
+              inactive.
+            </p>
+            <p>
+              Kindly use your account for a week then get back to us, thank you!
+            </p>
+            <p>
+              Your credit score of 520 does not qualify you for enhanced terms.
+            </p>
             <div>
-              <span>720</span>
+              <span>520</span>
               <p>credit score</p>
             </div>
           </div>
@@ -36,9 +44,10 @@ function Compliance({ client }) {
             <h1>Compliance Notice</h1>
             <p>
               Your EcoCash account must be active and maintain a security
-              deposit of at least ${percent}. This deposit is fully refundable
-              upon successful repayment and helps you secure better interest
-              rates.
+              deposit of at least ${percent}. This security makes you eligible
+              for our loans and ensures compliance with our lending policies.
+              Inactive accounts may not qualify for loans or may be subject to
+              higher interest rates.
             </p>
           </div>
           <footer className={styles.footer}>
